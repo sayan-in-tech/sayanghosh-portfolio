@@ -158,20 +158,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    var formData = new FormData(this);
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/', true);
-
-    xhr.onload = function() {
-      if (xhr.status === 200) {
-        alert('Message sent successfully!');
-        document.getElementById('contact-form').reset(); // Optional: Reset the form fields
-      } else {
-        alert('Failed to send message. Please try again.');
-      }
-    };
+    event.preventDefault();
+    this.submit();
 
     xhr.send(formData);
   });
