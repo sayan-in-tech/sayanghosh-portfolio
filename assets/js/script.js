@@ -159,6 +159,18 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
+
+    // Show the pop-up
+    document.getElementById('overlay').classList.add('show');
+    document.getElementById('popup').classList.add('show');
+
+    // Hide the pop-up after 3 seconds
+    setTimeout(function() {
+      document.getElementById('overlay').classList.remove('show');
+      document.getElementById('popup').classList.remove('show');
+    }, 3000);
+
+    // Once done, submit the form
     this.submit();
   });
 }
