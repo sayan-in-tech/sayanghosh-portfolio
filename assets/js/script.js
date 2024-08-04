@@ -160,7 +160,5 @@ for (let i = 0; i < navigationLinks.length; i++) {
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
     this.submit();
-
-    xhr.send(formData);
   });
 }
