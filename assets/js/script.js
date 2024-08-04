@@ -170,7 +170,22 @@ for (let i = 0; i < navigationLinks.length; i++) {
       document.getElementById('popup').classList.remove('show');
     }, 3000);
 
-    // Once done, submit the form
-    this.submit();
+    // Create a FormData object from the form element
+    const formData = new FormData(this);
+
+    // Use the Fetch API to submit the form data to Netlify
+    fetch('/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: new URLSearchParams(formData).toString()
+    }).then(() => {
+      // Form submission success handling
+      console.log('Form successfully submitted');
+    }).catch((error) => {
+      // Form submission error handling
+      console.error('Error submitting form:', error);
+    });
   });
 }
