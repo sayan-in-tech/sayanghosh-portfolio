@@ -1023,7 +1023,7 @@
           <h3 class="h3 form-title">Contact Form</h3>
 
 
-          <form id="contact-form" name="contact" netlify>
+          <form id="contact-form" name="contact" method="POST" netlify>
             <input type="hidden" name="form-name" value="contact">
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
@@ -1035,6 +1035,16 @@
               <span>Send Message</span>
             </button>
           </form>
+        
+          <div class="overlay" id="overlay"></div>
+          <div class="popup" id="popup">
+            <div class="icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 16.2l-3.5-3.5 1.4-1.4L9 13.4l7.1-7.1 1.4 1.4z"/>
+              </svg>
+            </div>
+            <p>Message sent successfully</p>
+          </div>
 
           <div class="overlay" id="overlay"></div>
           <div class="popup" id="popup">
