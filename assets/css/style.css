@@ -555,6 +555,14 @@ main {
   line-height: 1.6;
 }
 
+.github-contributions-title {
+  margin-top: 30px; /* Adjust the top margin as needed */
+  margin-bottom: 10px; /* Adjust the bottom margin as needed */
+  padding-top: 10px;  /* Optional: adds more space above the text */
+  padding-bottom: 10px; /* Optional: adds more space below the text */
+}
+
+
 
 /**
  * #testimonials 
